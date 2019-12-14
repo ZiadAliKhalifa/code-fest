@@ -9,7 +9,7 @@ import "../../assets/styles/icomoon_style.css";
 import "../../assets/styles/styles.css";
 import "../../assets/styles/task-detail.css";
 
-const ResourcePage = ({}) => {
+const AdminView = ({}) => {
   return (
       <div className="container-fluid">
         <div className="row">
@@ -1225,4 +1225,4 @@ const ResourcePage = ({}) => {
       </div>
          );
 };
-export default ResourcePage;
+export default AdminView;

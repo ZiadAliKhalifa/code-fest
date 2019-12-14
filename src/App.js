@@ -6,7 +6,10 @@ import HeaderBar from "./components/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
 import NavBar from "./components/NavBar/NavBar";
-import TasksPage from "./components/TasksPage/TasksPage";
+import TaskDetailPage from "./components/TaskDetailPage/TaskDetailPage";
+import TaskPage from "./components/TaskPage/TaskPage";
+import AdminView from "./components/AdminView/AdminView";
+import BoardPage from "./components/BoardPage/BoardPage";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import TechQ from "./components/HomePage/TechQ";
 import "bootstrap/dist/css/bootstrap.css";
@@ -166,12 +169,47 @@ class App extends Component {
                 />
               )}
             />
-
+            <Route
+              exact
+              path="/board"
+              render={props => (
+                <BoardPage
+                  {...props}
+                  isAuthenticated={this.state.isAuthenticated}
+                  user={this.state.user}
+                  authButtonMethod={this.login.bind(this)}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/task"
+              render={props => (
+                <TaskPage
+                  {...props}
+                  isAuthenticated={this.state.isAuthenticated}
+                  user={this.state.user}
+                  authButtonMethod={this.login.bind(this)}
+                />
+              )}
+            />
             <Route
               exact
               path="/admin"
               render={props => (
-                <TasksPage
+                <AdminView
+                  {...props}
+                  isAuthenticated={this.state.isAuthenticated}
+                  user={this.state.user}
+                  authButtonMethod={this.login.bind(this)}
+                />
+              )}
+            />
+
+            <Route
+              path="/task-details"
+              render={props => (
+                <TaskDetailPage
                   {...props}
                   isAuthenticated={this.state.isAuthenticated}
                   user={this.state.user}
