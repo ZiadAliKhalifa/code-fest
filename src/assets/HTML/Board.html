@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="resource-style.css" />
+    <link rel="stylesheet" type="text/css" href="media_query.css" />
+    <link rel="stylesheet" type="text/css" href="body-style.css" />
+    <link rel="stylesheet" type="text/css" href="icomoon_style.css" />
+    <link rel="stylesheet" type="text/css" href="dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="profile.css" />
+    <link rel="stylesheet" type="text/css" href="board.css" />
+    <link rel="stylesheet" href="tags-input.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light nav_bar_prop justify-content-between tq-navbar">
+        <a class="navbar-brand logo" href="#">
+            <img class="img-fluid" src="Assets/logo.png" />
+        </a>
+        <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-md-auto pr-md-5 center-text-ul ">
+                <li class="nav-item active">
+                    <a class="nav-link nav_items_active text-nav" href="#">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_items text-nav" href="#">Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_items text-nav" href="Board.html">Board</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle profile-border text-nav" href="#" id="navbarDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img id="image">
+                        <span id="ProfileName"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown drop-menu" aria-labelledby="navbarDropdown">
+                        <div>
+                            <a class="dropdown-item center-text-ul" href="#">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="title m-left">
+                    <img src="Assets/board-icon.png">
+                    <span class="add">Board</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="board-area">
+                <div class="col-sm-12">
+                    <p class="form-title">
+                        Board
+                    </p>
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <div class="assigned-area">
+                                <label class="checkbox-area">Assigned to me
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <div class="dropdown show">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Dropdown link
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                                <input type="search" class="float-left" placeholder="Search tasks">
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="task-area">
+                                <h2>TO DO</h2>
+                                <div class="task">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h3><a href="task-detail.html">Task Name 1</a></h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s, when an unknown printer took a galley of type and
+                                                scrambled it to make a type specimen book.</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="Assets/profile.png">
+                                            <label>Due Date</label>
+                                            <label>15 May 2020</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h3><a href="task-detail.html">Task Name 1</a></h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s, when an unknown printer took a galley of type and
+                                                scrambled it to make a type specimen book.</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="Assets/profile.png">
+                                            <label>Due Date</label>
+                                            <label>15 May 2020</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="task-area">
+                                <h2>IN PROGRESS</h2>
+                                <div class="task">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h3><a href="task-detail.html">Task Name 1</a></h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s, when an unknown printer took a galley of type and
+                                                scrambled it to make a type specimen book. It has survived not only five
+                                                centuries, </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="Assets/profile.png">
+                                            <label>Due Date</label>
+                                            <label>15 May 2020</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="task-area">
+                                <h2>DONE</h2>
+                                <div class="task">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h3><a href="task-detail.html">Task Name 1</a></h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="Assets/profile.png">
+                                            <label>Due Date</label>
+                                            <label>15 May 2020</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h3><a href="task-detail.html">Task Name 1</a></h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="Assets/profile.png">
+                                            <label>Due Date</label>
+                                            <label>15 May 2020</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./jsonObject.js"></script>
+    <script src="./index.js"></script>
+    <script src="./tags-input.js"></script>
+    <script src="./tags-init.js"></script>
+    <script src="./dropdpwn.js"></script>
+    <script src="./jquery.nicescroll.js"></script>
+    <script src="./scrollbar.js"></script>
+</body>
+
+</html>
