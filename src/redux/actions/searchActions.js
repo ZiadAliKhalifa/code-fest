@@ -28,6 +28,14 @@ export const searchGitHubRepos = (repoName, pageNumber) => {
   };
 };
 
+//Redux thunk
+
+// 1) Dispatch an action to say that you started fetching
+// 2) Return a function that returns a resolved promise
+// 3) Fetch the URL you want to fetch
+// 4) Return the resolved promise
+// 5)
+
 export const setCentralSearchPhrase = searchPhrase => {
   store.dispatch(set_search_phrase(searchPhrase));
 };
