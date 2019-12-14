@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import mario from "../assets/mario.png";
+// import mario from "../assets/mario.png";
 
 export default function NoReposFound() {
   return (
@@ -12,11 +12,11 @@ export default function NoReposFound() {
           </p>
         </Grid>
         <Grid item sm={4}>
-          <img
+          {/* <img
             src={mario}
             alt="Mario"
             style={{ height: "5rem", width: "3rem" }}
-          />
+          /> */}
         </Grid>
       </Grid>
     </>
