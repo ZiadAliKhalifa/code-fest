@@ -34,7 +34,9 @@ export const searchGitHubRepos = (repoName, pageNumber) => {
 // 2) Return a function that returns a resolved promise
 // 3) Fetch the URL you want to fetch
 // 4) Return the resolved promise
-// 5)
+// 5) If the promise was resolved, dispatch the action
+// that says that you are done fetching and pass the data
+//6)  If the promise fails, dispatch the action that says that you are done fetching and this is an error!
 
 export const setCentralSearchPhrase = searchPhrase => {
   store.dispatch(set_search_phrase(searchPhrase));
