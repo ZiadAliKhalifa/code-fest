@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import config from "./Config";
 import { UserAgentApplication } from "msal";
 
+import HeaderBar from "./components/Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "reactstrap";
 import NavBar from "./components/NavBar/NavBar";
@@ -9,6 +10,7 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import TechQ from "./components/HomePage/TechQ";
 import "bootstrap/dist/css/bootstrap.css";
 import { getUserDetails } from "./services/GraphService";
+import myApp from "./components/index";
 
 const config = {
   appId: "f0e12ca3-6317-48d7-8a0c-10de09d61340",
@@ -139,8 +141,9 @@ class App extends Component {
     }
 
     return (
-      <Router>
-        <div>
+      <>
+        <HeaderBar />
+        <Router>
           <NavBar
             isAuthenticated={this.state.isAuthenticated}
             authButtonMethod={
@@ -164,8 +167,40 @@ class App extends Component {
               )}
             />
           </Container>
-        </div>
-      </Router>
+          <myApp>
+            <script
+              src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              crossorigin="anonymous"
+            ></script>
+            <script
+              src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+              integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+              crossorigin="anonymous"
+            ></script>
+            <script
+              src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+              integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+              crossorigin="anonymous"
+            ></script>
+            <script src="./jsonObject.js"></script>
+            <script src="./index.js"></script>
+            <script src="./tags-input.js"></script>
+            <script src="./tags-init.js"></script>
+            <script src="./dropdpwn.js"></script>
+            <script src="./jquery.nicescroll.js"></script>
+            <script src="./scrollbar.js"></script>
+          </myApp>
+          <Switch>
+            <Route path="/my-repos">
+              <MyRepositories />
+            </Route>
+            <Route path="/" exact>
+              <div>Hi</div>
+            </Route>
+          </Switch>
+        </Router>
+      </>
     );
   }
 
