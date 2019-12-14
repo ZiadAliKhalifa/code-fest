@@ -116,7 +116,7 @@
   height: 34px;
   border-radius: 10px;
   width: 30%;
-  background: url("./../images/search.png") no-repeat 98% center #fff;
+  background: url("../images/search.png") no-repeat 98% center #fff;
   padding: 0 10px;
   font-size: 12px;
 }
