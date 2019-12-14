@@ -87,7 +87,7 @@ export default class NavBar extends React.Component {
       <div>
         <Navbar color="dark" dark expand="md" fixed="top">
           <Container>
-            <NavbarBrand href="/">React Graph</NavbarBrand>
+            <NavbarBrand href="/">TechnicalQ</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="mr-auto" navbar></Nav>
