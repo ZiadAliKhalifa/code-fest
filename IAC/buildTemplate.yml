@@ -1,0 +1,161 @@
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: "Project Name and Stage"
+        Parameters:
+          - ProjectName
+          - Stage
+
+      - Label:
+          default: "Frontend parameters"
+        Parameters:
+          - GitHubFrontendRepositoryURL
+          - GitHubFrontEndBranch
+
+      - Label:
+          default: "Site"
+
+    ParameterLabels:
+      ProjectName:
+        default: Project Name
+      Stage:
+        default: Stage
+      GitHubFrontEndBranch:
+        default: GitHub Frontend Branch
+      GitHubFrontendRepositoryURL:
+        default: GitHub Frontend Repository URL
+
+Parameters:
+  # Common parameters
+  ProjectName:
+    Type: String
+    Default: RepoLocator
+    Description: "Enter the project name. This will also be the name of the s3 bucket that contains the build and deploy artifacts, therefore it must be a valid bucket name with only lowercase letters, numbers, periods (.), and dashes (-)."
+  Stage:
+    Type: String
+    AllowedValues: [develop, production, release]
+
+  # Frontend parameters
+  GitHubFrontEndBranch:
+    Type: String
+    Default: develop
+  GitHubFrontendRepositoryURL:
+    Type: String
+    Default: "https://github.com/ziadalikhalifa/repolocator.git"
+
+Conditions:
+  UseS3Direct: !Equals [!Ref Stage, "develop"]
+  DisAllowS3Direct: !Not [!Equals [!Ref Stage, "develop"]]
+  IsProd: !Equals [!Ref Stage, "production"]
+  IsStage: !Equals [!Ref Stage, "release"]
+
+Resources:
+  # Frontend resources
+  DeploymentBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: BucketOwnerFullControl
+      BucketName: !Join ["-", [!Ref ProjectName, !Ref Stage, "bucket"]]
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: index.html
+
+  DeploymentBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Condition: UseS3Direct
+    Properties:
+      Bucket: !Ref DeploymentBucket
+      PolicyDocument:
+        Statement:
+          - Sid: "PublicReadGetObject"
+            Action:
+              - "s3:GetObject"
+            Effect: "Allow"
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:aws:s3:::"
+                  - Ref: "DeploymentBucket"
+                  - "/*"
+            Principal: "*"
+
+  CodeBuildCICDServiceRoleFrontend:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Join
+        - "-"
+        - - !Ref ProjectName
+          - !Ref Stage
+          - !Ref "AWS::Region"
+          - "ui-CICD-codebuild-role"
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: codebuild.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                  - ecr:GetAuthorizationToken
+                  - s3:PutAccountPublicAccessBlock
+                  - s3:GetAccountPublicAccessBlock
+                  - s3:ListAllMyBuckets
+                  - s3:ListJobs
+                  - s3:CreateJob
+                  - s3:HeadBucket
+                  - s3:ListObjectsV2
+              - Action:
+                  - s3:*
+                Effect: Allow
+                Resource:
+                  - !Sub arn:aws:s3:::${DeploymentBucket}
+                  - arn:aws:s3:::*/*
+
+  CodeBuildCICDFrontend:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Join ["-", [!Ref ProjectName, !Ref Stage, "ui", "CICD"]]
+      Artifacts:
+        Type: NO_ARTIFACTS
+      BadgeEnabled: true
+      Source:
+        Auth:
+          Type: OAUTH
+        Location: !Ref GitHubFrontendRepositoryURL
+        ReportBuildStatus: true
+        Type: GITHUB
+        BuildSpec: buildspec_cd.yml
+      Environment:
+        ComputeType: BUILD_GENERAL1_MEDIUM
+        Image: aws/codebuild/nodejs:10.14.1
+        Type: LINUX_CONTAINER
+        EnvironmentVariables:
+          - Name: S3_BUCKET
+            Value: !Ref DeploymentBucket
+          - Name: REACT_APP_ENV
+            Value: !Ref Stage
+      ServiceRole: !Ref CodeBuildCICDServiceRoleFrontend
+      Triggers:
+        FilterGroups:
+          - - Type: EVENT
+              Pattern: PUSH
+            - Type: HEAD_REF
+              Pattern: !Sub "^refs/heads/${GitHubFrontEndBranch}$"
+              ExcludeMatchedPattern: false
+        Webhook: true
+
+Outputs:
+  BucketUrl:
+    Value: !GetAtt [DeploymentBucket, WebsiteURL]
