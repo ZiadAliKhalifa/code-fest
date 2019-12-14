@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="resource-style.css" />
+    <link rel="stylesheet" type="text/css" href="media_query.css" />
+    <link rel="stylesheet" type="text/css" href="body-style.css" />
+    <link rel="stylesheet" type="text/css" href="icomoon_style.css" />
+    <link rel="stylesheet" type="text/css" href="dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="profile.css" />
+    <link rel="stylesheet" href="tags-input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light nav_bar_prop justify-content-between tq-navbar">
+        <a class="navbar-brand logo" href="#">
+            <img class="img-fluid" src="Assets/logo.png" />
+        </a>
+        <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-md-auto pr-md-5 center-text-ul ">
+                <li class="nav-item active">
+                    <a class="nav-link nav_items text-nav" href="#">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_items_active text-nav" href="#">Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_items text-nav" href="#">Board</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle profile-border text-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img id="image">
+                        <span id="ProfileName"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown drop-menu" aria-labelledby="navbarDropdown">
+                        <div>
+
+                            <a class="dropdown-item center-text-ul display-inline" href="#">
+                                <div class="icon-logout-2 display-inline logout-image"></div>
+                                <p class="display-inline logout-text">Logout</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="title m-left">
+                    <i class="icon-business-card-of-a-man-with-contact-info user mr-3"></i>
+                    <span class="add">Add a new needed task</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-3 resource-form m-left task-height">
+                <p class="form-title">
+                    Add Task
+                </p>
+                <form class="form-style">
+                    <input type="text" placeholder="Task Name" class="form-labels" />
+
+                    <input type="text" placeholder="Task Type" class="form-labels" />
+
+                    <div class="form-group">
+                        <label for="tags-input" class="input_tag">Preferred Technologies</label>
+                        <input type="text" id="tag-input1">
+                    </div>
+                    <input type="text" placeholder="Urgency" class="form-labels" />
+                    <input type="text" placeholder="Function" class="form-labels" />
+                    <textarea type="text" rows="4" cols="50" placeholder="Brief Description" class="form-labels"></textarea>
+                    <button class="btn add-button" type="button">ADD</button>
+                </form>
+            </div>
+            <div class="col-sm-12 col-md-7 resource-form m-left-50">
+                <p class="form-title">
+                    Task List
+                </p>
+                <div class="profile-wrapper">
+                    <div class="profile">
+                        <div class="title-dropdown">
+                            <button class="dropbtn bg-btn">    
+                                    <span class="profile-title-text">Assigning</span>
+                                    <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                </button>
+                            <div class="title-dropdown-content">
+                                <a href="#">Software Engineer</a>
+                                <a href="#">Project Manager</a>
+                                <a href="#">Consltuant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="title-dropdown">
+                            <button class="dropbtn bg-btn">    
+                                        <span class="profile-title-text">Date</span>
+                                        <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                    </button>
+                            <div class="title-dropdown-content">
+                                <a href="#">10/12/2019</a>
+                                <a href="#">11/11/2020</a>
+                                <a href="#">01/01/2021</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="title-dropdown">
+                            <button class="dropbtn bg-btn">    
+                                        <span class="profile-title-text">Technology</span>
+                                        <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                    </button>
+
+                            <div class=" title-dropdown-content">
+                                <div class="title-dropdown-scroll" id="scroll">
+                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Sitecore</span></a>
+                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Photoshop</span></a>
+                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">C sharp</span></a>
+                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">PHP</span></a>
+
+                                </div>
+                                <input type="cancel" class="btn dropdown-cancelButton" value="Select" />
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="main">
+
+                            <!-- Actual search box -->
+                            <div class="form-group has-search form-group-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="All Tasks" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-wrapper">
+                    <div class="row border-bottom">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="info">
+                                <img class="image-profile avatar" src="Assets/avatar.png" />
+                                <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-body mb-0 p-0">
+                                                <div class="row popup-margins">
+                                                    <div class="col-sm-12 col-md-12 popup-profile">
+                                                        Task Details
+                                                    </div>
+                                                </div>
+                                                <div class="row popup-margins">
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <p class="name-info">Task Name</p>
+                                                        <p class="name-info">Task Type</p>
+
+                                                        <p class="name-info">Direct Manager</p>
+                                                        <p class="name-info">Project</p>
+                                                        <p class="name-info">Urgency</p>
+                                                        <p class="name-info">From</p>
+                                                        <p class="name-info">To</p>
+                                                        <p class="name-info">Technologies</p>
+                                                        <p class="name-info">Function</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-7">
+                                                        <p class="popup-info">HUB</p>
+                                                        <p class="popup-info">Associate Project ManagerDevelopment</p>
+
+                                                        <p class="popup-info">Ayman</p>
+                                                        <p class="popup-info">WE</p>
+                                                        <p class="popup-info">High</p>
+                                                        <p class="popup-info">14/10/2019</p>
+                                                        <p class="tech-margins">15/11/2019</p>
+                                                        <p class="tech-margins">
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+
+                                                            </div>
+                                                        </p>
+                                                        <p class="popup-info">text text</p>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!--/.Content-->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--Modal: Name-->
+
+                                <a>
+                                    <div class="img-fluid z-depth-1 name span-inline" alt="video" data-toggle="modal" data-target="#modal1">Task Name 1</div>
+
+                                </a>
+
+
+
+                                <div class="m-left-85">
+                                    <div class="not-available display-inline">
+                                    </div>
+                                    <div class="display-inline not-ava-text">Not assigned</div>
+                                </div>
+                                <div class="resource-title">
+                                    <span>To:</span>
+                                    <span class="name-span">N/A</span></div>
+                                <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+
+                                        <!--Content-->
+                                        <div class="modal-content">
+
+                                            <!--Body-->
+                                            <div class="modal-body mb-0 p-0">
+                                                <p class="edit-form-title popup-margins">
+                                                    Assigning resource
+                                                </p>
+                                                <div class="popup-profile-wrapper">
+
+                                                    <div class="profile">
+                                                        <div class="title-dropdown">
+                                                            <button class="dropbtn bg-btn">    
+                                                                                    <span class="profile-title-text">Technology</span>
+                                                                                    <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                                                                </button>
+
+                                                            <div class=" title-dropdown-content">
+                                                                <div class="title-dropdown-scroll" id="scroll">
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Sitecore</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Photoshop</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">C sharp</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">PHP</span></a>
+                                                                </div>
+                                                                <input type="cancel" class="btn dropdown-cancelButton" value="Select" />
+
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile">
+                                                        <div class="main">
+
+                                                            <!-- Actual search box -->
+                                                            <div class="form-group has-search form-group-search">
+                                                                <span class="fa fa-search form-control-feedback"></span>
+                                                                <input type="text" class="form-control" placeholder="All Resources" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <a>
+
+                                    <div data-toggle="modal" data-target="#modal7" class="assigning">
+                                        <div class="assign-image display-inline">
+                                            <img class="center-image-popup" src="Assets/plus.png">
+                                        </div>
+
+                                        <div class="assign-text display-inline">Assigning resource</div>
+                                    </div>
+
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-5">
+
+
+                            <div class="tech-name display-inline">
+                                <div class="skill">Sitecore</div>
+                                <div class="skill">Sharepoint</div>
+                                <div class="skill">Photoshop</div>
+                                <div class="more">...</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+
+                            <!--Modal: Name-->
+                            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content">
+
+                                        <!--Body-->
+
+                                        <div class="modal-body mb-0 p-0">
+                                            <p class="edit-form-title popup-margins">
+                                                Edit resource
+                                            </p>
+                                            <div class="popup-profile-wrapper">
+
+                                                <div class="profile">
+                                                    <div class="title-dropdown">
+                                                        <button class="dropbtn bg-btn">    
+                                                                        <span class="profile-title-text">Technology</span>
+                                                                        <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                                                    </button>
+
+                                                        <div class=" title-dropdown-content">
+                                                            <div class="title-dropdown-scroll" id="scroll">
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Sitecore</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Photoshop</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">C sharp</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">PHP</span></a>
+                                                            </div>
+                                                            <input type="cancel" class="btn dropdown-cancelButton" value="Select" />
+
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="profile">
+                                                    <div class="main">
+
+                                                        <!-- Actual search box -->
+                                                        <div class="form-group has-search form-group-search">
+                                                            <span class="fa fa-search form-control-feedback"></span>
+                                                            <input type="text" class="form-control" placeholder="All Resources" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup-cancel">
+                                                            <img class="center-image" src="Assets/Group.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup">
+                                                            <img class="center-image" src="Assets/plus.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup">
+                                                            <img class="center-image" src="Assets/plus.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <a>
+                                <div data-toggle="modal" data-target="#modal2" class="icon-writing z-depth-1 display-inline edit-margin">
+                                    <a href="#" class="edit-text">Edit</a>
+                                </div>
+                            </a>
+
+                            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content delete-cont">
+
+                                        <!--Body-->
+                                        <div class="modal-body mb-0 p-0">
+                                            <div class="row">
+                                                <div class="col=sm-12 col-md-12 delete-margin">
+                                                    <p class="popup-delete-confirm">Confirm to delete</p>
+                                                    <p class="popup-confirm">Are you sure you want to delete this?</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col=sm-12 col-md-12 delete-padding">
+                                                    <button class="btn cancel-button popup-delete" type="button">Delete</button>
+                                                    <button class="btn cancel-button popup-cancel" type="button">Cancel</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <a>
+                                <div data-toggle="modal" data-target="#modal3" class="icon-rubbish-bin z-depth-1 display-inline edit m-left-10">
+                                    <a href="#" class="delete-text">Delete</a>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row border-bottom">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="info">
+                                <img class="image-profile avatar" src="Assets/pic.png" />
+                                <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-body mb-0 p-0">
+                                                <div class="row popup-margins">
+                                                    <div class="col-sm-12 col-md-12 popup-profile">
+                                                        Task Details
+                                                    </div>
+                                                </div>
+                                                <div class="row popup-margins">
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <p class="name-info">Task Name</p>
+                                                        <p class="name-info">Task Type</p>
+
+                                                        <p class="name-info">Direct Manager</p>
+                                                        <p class="name-info">Project</p>
+                                                        <p class="name-info">Urgency</p>
+                                                        <p class="name-info">From</p>
+                                                        <p class="name-info">To</p>
+                                                        <p class="name-info">Technologies</p>
+                                                        <p class="name-info">Function</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-7">
+                                                        <p class="popup-info">HUB</p>
+                                                        <p class="popup-info">Associate Project ManagerDevelopment</p>
+
+                                                        <p class="popup-info">Ayman</p>
+                                                        <p class="popup-info">WE</p>
+                                                        <p class="popup-info">High</p>
+                                                        <p class="popup-info">14/10/2019</p>
+                                                        <p class="tech-margins">15/11/2019</p>
+                                                        <p class="tech-margins">
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+
+                                                            </div>
+                                                        </p>
+                                                        <p class="popup-info">text text</p>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!--/.Content-->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--Modal: Name-->
+
+                                <a>
+                                    <div class="img-fluid z-depth-1 name span-inline" alt="video" data-toggle="modal" data-target="#modal1">Task Name 2</div>
+                                </a>
+
+
+
+                                <div class="m-left-85">
+                                    <div class="available display-inline">
+                                    </div>
+                                    <div class="display-inline ava-text">Assigned</div>
+                                </div>
+                                <div class="resource-title">
+                                    <span>To:</span>
+                                    <span class="name-span">Heba Fouad</span></div>
+                                <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+
+                                        <!--Content-->
+                                        <div class="modal-content">
+
+                                            <!--Body-->
+                                            <div class="modal-body mb-0 p-0">
+                                                <p class="edit-form-title popup-margins">
+                                                    Assigning resource
+                                                </p>
+                                                <div class="popup-profile-wrapper">
+
+                                                    <div class="profile">
+                                                        <div class="title-dropdown">
+                                                            <button class="dropbtn bg-btn">    
+                                                                                        <span class="profile-title-text">Technology</span>
+                                                                                        <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                                                                    </button>
+
+                                                            <div class=" title-dropdown-content">
+                                                                <div class="title-dropdown-scroll" id="scroll">
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Sitecore</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Photoshop</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">C sharp</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">PHP</span></a>
+                                                                </div>
+                                                                <input type="cancel" class="btn dropdown-cancelButton" value="Select" />
+
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile">
+                                                        <div class="main">
+
+                                                            <!-- Actual search box -->
+                                                            <div class="form-group has-search form-group-search">
+                                                                <span class="fa fa-search form-control-feedback"></span>
+                                                                <input type="text" class="form-control" placeholder="All Resources" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <a>
+
+                                    <div data-toggle="modal" data-target="#modal7" class="assigning">
+                                        <div class="assign-image display-inline">
+                                            <img class="center-image-popup" src="Assets/plus.png">
+                                        </div>
+
+                                        <div class="assign-text display-inline">Assigning resource</div>
+                                    </div>
+
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-5">
+
+
+                            <div class="tech-name display-inline">
+                                <div class="skill">Sitecore</div>
+                                <div class="skill">Sharepoint</div>
+                                <div class="skill">Photoshop</div>
+                                <div class="more">...</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+
+                            <!--Modal: Name-->
+                            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content">
+
+                                        <!--Body-->
+
+                                        <div class="modal-body mb-0 p-0">
+                                            <p class="edit-form-title popup-margins">
+                                                Edit resource
+                                            </p>
+                                            <div class="popup-profile-wrapper">
+
+                                                <div class="profile">
+                                                    <div class="title-dropdown">
+                                                        <button class="dropbtn bg-btn">    
+                                                                            <span class="profile-title-text">Technology</span>
+                                                                            <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                                                        </button>
+
+                                                        <div class=" title-dropdown-content">
+                                                            <div class="title-dropdown-scroll" id="scroll">
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Sitecore</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Photoshop</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">C sharp</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">PHP</span></a>
+                                                            </div>
+                                                            <input type="cancel" class="btn dropdown-cancelButton" value="Select" />
+
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="profile">
+                                                    <div class="main">
+
+                                                        <!-- Actual search box -->
+                                                        <div class="form-group has-search form-group-search">
+                                                            <span class="fa fa-search form-control-feedback"></span>
+                                                            <input type="text" class="form-control" placeholder="All Resources" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup-cancel">
+                                                            <img class="center-image" src="Assets/Group.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup">
+                                                            <img class="center-image" src="Assets/plus.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup">
+                                                            <img class="center-image" src="Assets/plus.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <a>
+                                <div data-toggle="modal" data-target="#modal2" class="icon-writing z-depth-1 display-inline edit-margin">
+                                    <a href="#" class="edit-text">Edit</a>
+                                </div>
+                            </a>
+
+                            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg delete-cont" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content">
+
+                                        <!--Body-->
+                                        <div class="modal-body mb-0 p-0">
+                                            <div class="row">
+                                                <div class="col=sm-12 col-md-12 delete-margin">
+                                                    <p class="popup-delete-confirm">Confirm to delete</p>
+                                                    <p class="popup-confirm">Are you sure you want to delete this?</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col=sm-12 col-md-12 delete-padding">
+                                                    <button class="btn cancel-button popup-delete" type="button">Delete</button>
+                                                    <button class="btn cancel-button popup-cancel" type="button">Cancel</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <a>
+                                <div data-toggle="modal" data-target="#modal3" class="icon-rubbish-bin z-depth-1 display-inline edit m-left-10">
+                                    <a href="#" class="delete-text">Delete</a>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row border-bottom">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="info">
+                                <img class="image-profile avatar" src="Assets/pic.png" />
+                                <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-body mb-0 p-0">
+                                                <div class="row popup-margins">
+                                                    <div class="col-sm-12 col-md-12 popup-profile">
+                                                        Task Details
+                                                    </div>
+                                                </div>
+                                                <div class="row popup-margins">
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <p class="name-info">Task Name</p>
+                                                        <p class="name-info">Task Type</p>
+
+                                                        <p class="name-info">Direct Manager</p>
+                                                        <p class="name-info">Project</p>
+                                                        <p class="name-info">Urgency</p>
+                                                        <p class="name-info">From</p>
+                                                        <p class="name-info">To</p>
+                                                        <p class="name-info">Technologies</p>
+                                                        <p class="name-info">Function</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-7">
+                                                        <p class="popup-info">HUB</p>
+                                                        <p class="popup-info">Associate Project ManagerDevelopment</p>
+
+                                                        <p class="popup-info">Ayman</p>
+                                                        <p class="popup-info">WE</p>
+                                                        <p class="popup-info">High</p>
+                                                        <p class="popup-info">14/10/2019</p>
+                                                        <p class="tech-margins">15/11/2019</p>
+                                                        <p class="tech-margins">
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+
+                                                            </div>
+                                                        </p>
+                                                        <p class="popup-info">text text</p>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!--/.Content-->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--Modal: Name-->
+
+                                <a>
+                                    <div class="img-fluid z-depth-1 name span-inline" alt="video" data-toggle="modal" data-target="#modal1">Task Name 3</div>
+                                </a>
+
+
+
+
+                                <div class="m-left-85">
+                                    <div class="available display-inline">
+                                    </div>
+                                    <div class="display-inline ava-text">Assigned</div>
+                                </div>
+                                <div class="resource-title">
+                                    <span>To:</span>
+                                    <span class="name-span">Amira Samir</span></div>
+                                <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+
+                                        <!--Content-->
+                                        <div class="modal-content">
+
+                                            <!--Body-->
+                                            <div class="modal-body mb-0 p-0">
+                                                <p class="edit-form-title popup-margins">
+                                                    Assigning resource
+                                                </p>
+                                                <div class="popup-profile-wrapper">
+
+                                                    <div class="profile">
+                                                        <div class="title-dropdown">
+                                                            <button class="dropbtn bg-btn">    
+                                                                                            <span class="profile-title-text">Technology</span>
+                                                                                            <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                                                                        </button>
+
+                                                            <div class=" title-dropdown-content">
+                                                                <div class="title-dropdown-scroll" id="scroll">
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Sitecore</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Photoshop</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">C sharp</span></a>
+                                                                    <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">PHP</span></a>
+                                                                </div>
+                                                                <input type="cancel" class="btn dropdown-cancelButton" value="Select" />
+
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile">
+                                                        <div class="main">
+
+                                                            <!-- Actual search box -->
+                                                            <div class="form-group has-search form-group-search">
+                                                                <span class="fa fa-search form-control-feedback"></span>
+                                                                <input type="text" class="form-control" placeholder="All Resources" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row border-bottom">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="info">
+
+                                                                <!--Modal: Name-->
+
+                                                                <img class="image-profile" src="Assets/image.png" />
+
+
+                                                                <div class="name span-inline">Heba Fouad</div>
+                                                                <div class="resource-title">Associate Project Manager Development</div>
+                                                                <div class="m-left-85">
+                                                                    <div class="available display-inline">
+                                                                    </div>
+                                                                    <div class="display-inline ava-text">Available</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="tech-name">Technologies</div>
+                                                            <div>
+                                                                <div class="skill">Sitecore</div>
+                                                                <div class="skill">Sharepoint</div>
+                                                                <div class="skill">Photoshop</div>
+                                                                <div class="more">...</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3">
+
+                                                            <!--Modal: Name-->
+                                                            <div class="assign-image-popup">
+                                                                <img class="center-image" src="Assets/plus.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <a>
+
+                                    <div data-toggle="modal" data-target="#modal7" class="assigning">
+                                        <div class="assign-image display-inline">
+                                            <img class="center-image-popup" src="Assets/plus.png">
+                                        </div>
+
+                                        <div class="assign-text display-inline">Assigning resource</div>
+                                    </div>
+
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-5">
+
+
+                            <div class="tech-name display-inline">
+                                <div class="skill">Sitecore</div>
+                                <div class="skill">Sharepoint</div>
+                                <div class="skill">Photoshop</div>
+                                <div class="more">...</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+
+                            <!--Modal: Name-->
+                            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content">
+
+                                        <!--Body-->
+
+                                        <div class="modal-body mb-0 p-0">
+                                            <p class="edit-form-title popup-margins">
+                                                Edit resource
+                                            </p>
+                                            <div class="popup-profile-wrapper">
+
+                                                <div class="profile">
+                                                    <div class="title-dropdown">
+                                                        <button class="dropbtn bg-btn">    
+                                                                                <span class="profile-title-text">Technology</span>
+                                                                                <img  class="dropdown-title-image pImage" src="Assets/Polygon 7.png"/>
+                                                                            </button>
+
+                                                        <div class=" title-dropdown-content">
+                                                            <div class="title-dropdown-scroll" id="scroll">
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Sitecore</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">Photoshop</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">C sharp</span></a>
+                                                                <a class="padding-5" href="#"><input type="checkbox" name="vehicle1" value="Bike"> <span class="drop-text">PHP</span></a>
+                                                            </div>
+                                                            <input type="cancel" class="btn dropdown-cancelButton" value="Select" />
+
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="profile">
+                                                    <div class="main">
+
+                                                        <!-- Actual search box -->
+                                                        <div class="form-group has-search form-group-search">
+                                                            <span class="fa fa-search form-control-feedback"></span>
+                                                            <input type="text" class="form-control" placeholder="All Resources" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup-cancel">
+                                                            <img class="center-image" src="Assets/Group.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup">
+                                                            <img class="center-image" src="Assets/plus.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-bottom">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="info">
+
+                                                            <!--Modal: Name-->
+
+                                                            <img class="image-profile" src="Assets/image.png" />
+
+
+                                                            <div class="name span-inline">Heba Fouad</div>
+                                                            <div class="resource-title">Associate Project Manager Development</div>
+                                                            <div class="m-left-85">
+                                                                <div class="available display-inline">
+                                                                </div>
+                                                                <div class="display-inline ava-text">Available</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="tech-name">Technologies</div>
+                                                        <div>
+                                                            <div class="skill">Sitecore</div>
+                                                            <div class="skill">Sharepoint</div>
+                                                            <div class="skill">Photoshop</div>
+                                                            <div class="more">...</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3">
+
+                                                        <!--Modal: Name-->
+                                                        <div class="assign-image-popup">
+                                                            <img class="center-image" src="Assets/plus.png">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <a>
+                                <div data-toggle="modal" data-target="#modal2" class="icon-writing z-depth-1 display-inline edit-margin">
+                                    <a href="#" class="edit-text">Edit</a>
+                                </div>
+                            </a>
+
+                            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg delete-cont" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content">
+
+                                        <!--Body-->
+                                        <div class="modal-body mb-0 p-0">
+                                            <div class="row">
+                                                <div class="col=sm-12 col-md-12 delete-margin">
+                                                    <p class="popup-delete-confirm">Confirm to delete</p>
+                                                    <p class="popup-confirm">Are you sure you want to delete this?</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col=sm-12 col-md-12 delete-padding">
+                                                    <button class="btn cancel-button popup-delete" type="button">Delete</button>
+                                                    <button class="btn cancel-button popup-cancel" type="button">Cancel</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <a>
+                                <div data-toggle="modal" data-target="#modal3" class="icon-rubbish-bin z-depth-1 display-inline edit m-left-10">
+                                    <a href="#" class="delete-text">Delete</a>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./jsonObject.js"></script>
+    <script src="./index.js"></script>
+    <script src="./tags-input.js"></script>
+    <script src="./tags-init.js"></script>
+    <script src="./dropdpwn.js"></script>
+    <script src="./jquery.nicescroll.js"></script>
+    <script src="./scrollbar.js"></script>
+</body>
+
+</html>
