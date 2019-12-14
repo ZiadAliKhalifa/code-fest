@@ -15,7 +15,7 @@ export default function HeaderBar() {
   return (
     <AppBar position="static" style={{ marginBottom: "2rem" }}>
       <Toolbar>
-        <img src={logo} alt="Repolocator logo" style={{ height: "6rem" }} />
+        <img src={logo} alt="logo" style={{ height: "6rem" }} />
 
         <Button disableRipple style={{ color: "#ffffff" }} href="/">
           Home
