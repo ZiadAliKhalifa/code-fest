@@ -14,7 +14,10 @@ const TaskDetailsPage = ({}) => {
     <div>
       <nav className="navbar navbar-expand-lg bg-light nav_bar_prop justify-content-between tq-navbar">
         <a className="navbar-brand logo" href="#">
-          <img className="img-fluid" src="Assets/logo.png" />
+          <img
+            className="img-fluid"
+            src={require("../../assets/images/logo.png")}
+          />
         </a>
         <button
           className="navbar-toggler navbar-light bg-light"
@@ -75,10 +78,11 @@ const TaskDetailsPage = ({}) => {
         <div className="row">
           <div className="col-sm-12 col-md-12">
             <div className="title m-left">
-              <img src="Assets/board-icon.png" />
+              <img src={require("../../assets/images/board-icon.png")} />
               <span className="add">
                 <a href="board.html">Board</a>{" "}
-                <img src="Assets/arrow-right.png" /> Task Details
+                <img src={require("../../assets/images/arrow-right.png")} />{" "}
+                Task Details
               </span>
             </div>
           </div>
@@ -222,7 +226,7 @@ const TaskDetailsPage = ({}) => {
                   </div>
                 </div>
                 <div className="col-sm-12 comment-details">
-                  <img src="Assets/image.png" />
+                  <img src={require("../../assets/images/image.png")} />
                   <div className="float-left">
                     <label className="bold">Heba Fouad</label>
                     <label className="light">15/06/2019</label>
@@ -238,7 +242,7 @@ const TaskDetailsPage = ({}) => {
                 <div className="clearfix" />
                 <hr />
                 <div className="col-sm-12 comment-details">
-                  <img src="Assets/user-icon.jpg" />
+                  <img src={require("../../assets/images/user-icon.jpg")} />
                   <div className="float-left">
                     <label className="bold">Michael Garas</label>
                     <label className="light">15/06/2019</label>
@@ -251,7 +255,7 @@ const TaskDetailsPage = ({}) => {
                 <div className="clearfix" />
                 <hr />
                 <div className="col-sm-12 comment-details">
-                  <img src="Assets/user-icon.jpg" />
+                  <img src={require("../../assets/images/user-icon.jpg")} />
                   <div className="float-left">
                     <label className="bold">Eman Mamdouh</label>
                     <label className="light">15/06/2019</label>

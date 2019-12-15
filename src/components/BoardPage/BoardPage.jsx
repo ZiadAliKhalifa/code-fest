@@ -13,7 +13,10 @@ const BoardPage = ({}) => {
     <div>
       <nav className="navbar navbar-expand-lg bg-light nav_bar_prop justify-content-between tq-navbar">
         <a className="navbar-brand logo" href="#">
-          <img className="img-fluid" src="Assets/logo.png" />
+          <img
+            className="img-fluid"
+            src={require("../../assets/images/logo.png")}
+          />
         </a>
         <button
           className="navbar-toggler navbar-light bg-light"
@@ -74,7 +77,7 @@ const BoardPage = ({}) => {
         <div className="row">
           <div className="col-sm-12 col-md-12">
             <div className="title m-left">
-              <img src="Assets/board-icon.png" />
+              <img src={require("../../assets/images/board-icon.png")} />
               <span className="add">Board</span>
             </div>
           </div>
@@ -146,7 +149,9 @@ const BoardPage = ({}) => {
                           </p>
                         </div>
                         <div className="col-sm-4">
-                          <img src="Assets/profile.png" />
+                          <img
+                            src={require("../../assets/images/profile.png")}
+                          />
                           <label>Due Date</label>
                           <label>15 May 2020</label>
                         </div>
@@ -167,7 +172,9 @@ const BoardPage = ({}) => {
                           </p>
                         </div>
                         <div className="col-sm-4">
-                          <img src="Assets/profile.png" />
+                          <img
+                            src={require("../../assets/images/profile.png")}
+                          />
                           <label>Due Date</label>
                           <label>15 May 2020</label>
                         </div>
@@ -194,7 +201,9 @@ const BoardPage = ({}) => {
                           </p>
                         </div>
                         <div className="col-sm-4">
-                          <img src="Assets/profile.png" />
+                          <img
+                            src={require("../../assets/images/profile.png")}
+                          />
                           <label>Due Date</label>
                           <label>15 May 2020</label>
                         </div>
@@ -217,7 +226,9 @@ const BoardPage = ({}) => {
                           </p>
                         </div>
                         <div className="col-sm-4">
-                          <img src="Assets/profile.png" />
+                          <img
+                            src={require("../../assets/images/profile.png")}
+                          />
                           <label>Due Date</label>
                           <label>15 May 2020</label>
                         </div>
@@ -235,7 +246,9 @@ const BoardPage = ({}) => {
                           </p>
                         </div>
                         <div className="col-sm-4">
-                          <img src="Assets/profile.png" />
+                          <img
+                            src={require("../../assets/images/profile.png")}
+                          />
                           <label>Due Date</label>
                           <label>15 May 2020</label>
                         </div>

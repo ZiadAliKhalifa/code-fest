@@ -29,7 +29,10 @@ export default function HeaderBar() {
           />
           <nav className="navbar navbar-expand-lg bg-light nav_bar_prop justify-content-between tq-navbar">
             <a className="navbar-brand logo" href="#">
-              <img className="img-fluid" src="Assets/logo.png" />
+              <img
+                className="img-fluid"
+                src={require("../assets/images/logo.png")}
+              />
             </a>
             <button
               className="navbar-toggler navbar-light bg-light"

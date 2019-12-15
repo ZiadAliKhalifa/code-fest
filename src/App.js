@@ -145,9 +145,8 @@ class App extends Component {
 
     return (
       <>
-        <HeaderBar />
         <Router>
-          <NavBar
+          {/* <NavBar
             isAuthenticated={this.state.isAuthenticated}
             authButtonMethod={
               this.state.isAuthenticated
@@ -155,7 +154,7 @@ class App extends Component {
                 : this.login.bind(this)
             }
             user={this.state.user}
-          />
+          /> */}
           <Container>
             <Route
               exact

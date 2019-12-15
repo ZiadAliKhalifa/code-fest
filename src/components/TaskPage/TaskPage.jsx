@@ -1,11 +1,11 @@
 import React from "react";
 import "../../assets/styles/media_query.css";
-import "../../assets/styles/profile.css";
 import "../../assets/styles/body-style.css";
-import "../../assets/styles/tags-input.css";
-import "../../assets/styles/dropdown.css";
-import "../../assets/styles/board.css";
 import "../../assets/styles/icomoon_style.css";
+import "../../assets/styles/dropdown.css";
+import "../../assets/styles/profile.css";
+import "../../assets/styles/tags-input.css";
+import "../../assets/styles/board.css";
 import "../../assets/styles/styles.css";
 import "../../assets/styles/task-detail.css";
 
@@ -14,7 +14,7 @@ const TaskPage = ({}) => {
           <div>
             <nav className="navbar navbar-expand-lg bg-light nav_bar_prop justify-content-between tq-navbar">
               <a className="navbar-brand logo" href="#">
-                <img className="img-fluid" src="Assets/logo.png" />
+                <img className="img-fluid" src={require("../../assets/images/logo.png")} />
               </a>
               <button className="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon " />
@@ -83,7 +83,7 @@ const TaskPage = ({}) => {
                       <div className="title-dropdown">
                         <button className="dropbtn bg-btn">    
                           <span className="profile-title-text">Assigning</span>
-                          <img className="dropdown-title-image pImage" src="Assets/Polygon 7.png" />
+                          <img className="dropdown-title-image pImage" src={require("../../assets/images/Polygon 7.png" )}/>
                         </button>
                         <div className="title-dropdown-content">
                           <a href="#">Software Engineer</a>
@@ -96,7 +96,7 @@ const TaskPage = ({}) => {
                       <div className="title-dropdown">
                         <button className="dropbtn bg-btn">    
                           <span className="profile-title-text">Technology</span>
-                          <img className="dropdown-title-image pImage" src="Assets/Polygon 7.png" />
+                          <img className="dropdown-title-image pImage" src={require("../../assets/images/Polygon 7.png")} />
                         </button>
                         <div className=" title-dropdown-content">
                           <div className="title-dropdown-scroll" id="scroll">
@@ -134,7 +134,7 @@ const TaskPage = ({}) => {
                                   </div>
                                   <div className="row">
                                     <div className="col-sm-12 col-md-3 m-left-50 border-right">
-                                      <img className="popup-image" src="Assets/popup.png" />
+                                      <img className="popup-image" src={require("../../assets/images/popup.png")} />
                                       <p className="popup-text">Added by</p>
                                       <p className="popup-name">Heba Fouad</p>
                                       <div className="modal fade" id="modal8" tabIndex={-1} role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -247,7 +247,7 @@ const TaskPage = ({}) => {
                             </div>
                           </div>
                           {/*Modal: Name*/}
-                          <a><img className="img-fluid z-depth-1 image-profile avatar" src="Assets/avatar.png" alt="video" data-toggle="modal" data-target="#modal1" /></a>
+                          <a><img className="img-fluid z-depth-1 image-profile avatar" src={require("../../assets/images/avatar.png")} alt="video" data-toggle="modal" data-target="#modal1" /></a>
                           <div className="name span-inline">Task Name 1</div>
                           <div className="m-left-85">
                             <div className="not-available display-inline">
@@ -353,7 +353,7 @@ const TaskPage = ({}) => {
                                   </div>
                                   <div className="row">
                                     <div className="col-sm-12 col-md-3 m-left-50 border-right">
-                                      <img className="popup-image" src="Assets/popup.png" />
+                                      <img className="popup-image" src={require("../../assets/images/popup.png")} />
                                       <p className="popup-text">Added by</p>
                                       <p className="popup-name">Heba Fouad</p>
                                       <div className="modal fade" id="modal8" tabIndex={-1} role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -466,7 +466,7 @@ const TaskPage = ({}) => {
                             </div>
                           </div>
                           {/*Modal: Name*/}
-                          <a><img className="img-fluid z-depth-1 image-profile" src="Assets/pic.png" alt="video" data-toggle="modal" data-target="#modal1" /></a>
+                          <a><img className="img-fluid z-depth-1 image-profile" src={require("../../assets/images/pic.png")} alt="video" data-toggle="modal" data-target="#modal1" /></a>
                           <div className="name span-inline">Task Name 2</div>
                           <div className="m-left-85">
                             <div className="available display-inline">
@@ -572,7 +572,7 @@ const TaskPage = ({}) => {
                                   </div>
                                   <div className="row">
                                     <div className="col-sm-12 col-md-3 m-left-50 border-right">
-                                      <img className="popup-image" src="Assets/popup.png" />
+                                      <img className="popup-image" src={require("../../assets/images/popup.png")} />
                                       <p className="popup-text">Added by</p>
                                       <p className="popup-name">Heba Fouad</p>
                                       <div className="modal fade" id="modal8" tabIndex={-1} role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -685,7 +685,7 @@ const TaskPage = ({}) => {
                             </div>
                           </div>
                           {/*Modal: Name*/}
-                          <a><img className="img-fluid z-depth-1 image-profile" src="Assets/pic.png" alt="video" data-toggle="modal" data-target="#modal1" /></a>
+                          <a><img className="img-fluid z-depth-1 image-profile" src={require("../../assets/images/pic.png")} alt="video" data-toggle="modal" data-target="#modal1" /></a>
                           <div className="name span-inline">Task Name 3</div>
                           <div className="m-left-85">
                             <div className="available display-inline">
